@@ -16,11 +16,11 @@ function App() {
             <div class="col-12">
             <footer>
             This project was coded by Noe Noe,
-            <a href="https://github.com/NoeNoe25/Refined_Weather_Project">
+            <a href="https://github.com/NoeNoe25/noenoeloveweather">
               is open-sourced on Github
             </a>
             and{" "}
-            <a href="https://benevolent-tanuki-f00e59.netlify.app">
+            <a href="https://app.netlify.com/sites/noenoeloveweather/overview">
               {" "}hosted on Netlify{" "}
             </a>
           </footer>
