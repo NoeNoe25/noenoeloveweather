@@ -73,7 +73,7 @@ export default function Weather(props) {
           />
         </div>
         <div className="col-3 p-0">
-          <button className="btn btn-outline-secondary" type="submit">
+          <button className="btn btn-outline-secondary" type="submit" id="search_btn">
             Search
           </button>
         </div>
@@ -86,7 +86,7 @@ export default function Weather(props) {
             <li id="time">
               {date && formatDate(date)}, {description}
             </li>
-            <li>
+            <li id="condition">
               Humidity: <strong id="humidity">{humidity}</strong>% , Wind:{" "}
               <strong id="wind">{wind}</strong> km/h
             </li>
@@ -102,7 +102,7 @@ export default function Weather(props) {
           </div>
         </div>
       </div>
-
+      <br/> 
       <WeatherForecast city1={coord1} city2={coord2} />
     </form>
   );

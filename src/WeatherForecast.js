@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './WeatherForecast.css';
 import WeatherIcon from "./WeatherIcon";
+import { InfinitySpin } from 'react-loader-spinner'
 
-export default function WeatherForecast({ lat, lon }) {
+export default function WeatherForecast({ city1, city2 }) {
+    let lat=city1;
+    let lon =city2;
     const [forecast, setForecast] = useState(null);
+
 
     // Use useEffect to handle side effects like API calls
     useEffect(() => {
@@ -22,26 +26,33 @@ export default function WeatherForecast({ lat, lon }) {
     function handleError(error) {
         console.error("Error fetching weather data:", error);
     }
-
+    
     return (
         <div>
             <div className="row"> 
                 {forecast ? (
-                    forecast.slice(0, 5).map((dailyForecast, index) => (
+                    forecast.slice(1,6).map((dailyForecast, index) => (
                         <div className="col" key={index}>
-                            <div className="card border-dark mb-3" style={{ maxWidth: '6rem' }}>
-                                <div className="card-header">{new Date(dailyForecast.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' })}</div>
+                            <div className="card " style={{ maxWidth: '6rem' }}>
+                                <div className="card-header">{new Date(dailyForecast.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' })}</div>
                                 <div className="card-body text-dark">
                                     <p className="card-text">
                                         <WeatherIcon state={dailyForecast.weather[0].icon} width={50} height={50} />
-                                        {Math.round(dailyForecast.temp.max)} / {Math.round(dailyForecast.temp.min)}°C 
+                                        <strong> <span id="max"> {Math.round(dailyForecast.temp.max)}° </span> &nbsp; 
+                                        <span id="min" > {Math.round(dailyForecast.temp.min)}°  </span></strong> 
+                                       
                                     </p>
                                 </div>
                             </div>
                         </div>
                     ))
                 ) : (
-                    <p>Loading forecast...</p>
+                    <InfinitySpin
+  visible={true}
+  width="200"
+  color="#f0f8ff"
+  ariaLabel="infinity-spin-loading"
+  />
                 )}
             </div>
         </div>
