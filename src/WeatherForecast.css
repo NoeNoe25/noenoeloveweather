@@ -1,3 +1,9 @@
 .card-text{
-    font-size: 13px;
+    font-size: 14px;
+}
+#max{
+    color: rgb(119, 19, 249);
+}
+#min{
+    color: rgb(168, 104, 252);;
 }

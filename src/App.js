@@ -13,13 +13,15 @@ function App() {
          <Weather defaultCity="Mawlamyine"/>
 
         <div class="row">
+           
             <div class="col-12">
+            <br/>
             <footer>
-            This project was coded by Noe Noe,
+            This project was coded by Noe Noe,&nbsp; 
             <a href="https://github.com/NoeNoe25/noenoeloveweather">
               is open-sourced on Github
             </a>
-            and{" "}
+            &nbsp;and{" "}
             <a href="https://app.netlify.com/sites/noenoeloveweather/overview">
               {" "}hosted on Netlify{" "}
             </a>

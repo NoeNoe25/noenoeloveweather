@@ -36,6 +36,7 @@ div.container {
 body {
   margin: 0;
   padding: 0;
+  
 }
 
   #search_bar {
@@ -52,7 +53,7 @@ body {
     font-size: 16px;
     border-radius: 6px;
     color: rgb(0, 0, 0);
-    border : 2px solid black;
+    border : 2px solid rgb(0, 0, 0);
   }
   
   ul {
@@ -60,6 +61,7 @@ body {
   }
   
   li#city {
+  
     font-size: 38px;
     font-weight: 700;
     line-height: 48px;
@@ -67,8 +69,8 @@ body {
   }
   
   #search_btn:hover {
-    background-color: #a7bcb9;
-    box-shadow: 11px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #c6c6c6;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
   }
   
   .design {
@@ -134,7 +136,7 @@ body {
   #wind,
   #kmh,
   #percent {
-    color: #f65282;
+    color: rgb(99, 10, 217);
   }
   .input-group {
     max-width: 100%;
@@ -147,5 +149,8 @@ body {
  
   }
  
-
+#condition,#time{
+  color: #f0f8ff;
+ 
+}
  
