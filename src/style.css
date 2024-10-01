@@ -6,6 +6,8 @@
   }
 }
 
+
+
 /* For smaller screens */
 @media (min-width: 576px) { 
   div.container {
@@ -25,11 +27,13 @@
   }
 }
 
+
 /* General container padding and other global settings */
 div.container {
   padding: 30px;
   margin: 0 auto; /* Center the container */
-  width: 800px; /* Ensure full width inside the max-width */
+  width:800px;
+  max-width: 100%; /* Ensure full width inside the max-width */
 }
 
 /* Remove fixed width from the body */
