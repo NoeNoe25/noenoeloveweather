@@ -22,7 +22,7 @@ function App() {
               is open-sourced on Github
             </a>
             &nbsp;and{" "}
-            <a href="https://app.netlify.com/sites/noenoeloveweather/overview">
+            <a href="https://noenoeloveweather.netlify.app">
               {" "}hosted on Netlify{" "}
             </a>
           </footer>
